@@ -13,4 +13,11 @@ Square.new(
     height: 100,
 )
 
+Circle.new(
+    color: 'yellow',
+    x: 20,
+    y: 20,
+    radius: 90,
+)
+
 show
