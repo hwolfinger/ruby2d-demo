@@ -5,7 +5,7 @@ set height: 480
 
 Image.new('background.png')
 
-Square.new(
+square = Square.new(
     color: 'red',
     x: 100,
     y: 10,
@@ -28,7 +28,7 @@ Triangle.new(
 )
 
 on :key_held do |event|
-    case event.key_held
+    case event.key
     when 'up'
         square.y -= 5
     when 'down'
@@ -38,4 +38,6 @@ on :key_held do |event|
     when 'right'
         square.x += 5
     end
+end
+
 show
