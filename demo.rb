@@ -5,7 +5,7 @@ set height: 480
 
 Image.new('background.png')
 
-square = Square.new(
+Square.new(
     color: 'red',
     x: 100,
     y: 10,
@@ -27,17 +27,29 @@ Triangle.new(
     x3:210, y3:110,
 )
 
+sprite = Sprite.new(
+    'character.png',
+    x: 100,
+    y: 380,
+    clip_width: 60,
+    animations: { fly: 1..3}
+)
+
 on :key_held do |event|
     case event.key
     when 'up'
-        square.y -= 5
+        sprite.y -= 5
     when 'down'
-        square.y += 5
+        sprite.y += 5
     when 'left'
-        square.x -= 5
+        sprite.x -= 5
     when 'right'
-        square.x += 5
+        sprite.x += 5
     end
+end
+
+on :key_up do
+    sprite.stop
 end
 
 show
