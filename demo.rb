@@ -37,7 +37,7 @@ sprite = Sprite.new(
 
 sound = Sound.new ('jump.ogg')
 
-music = Music.new ("background_music.ogg", loop: true)
+music = Music.new("background_music.ogg", loop: true)
 music.play
 
 on :key_held do |event|
