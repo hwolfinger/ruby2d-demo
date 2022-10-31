@@ -35,6 +35,8 @@ sprite = Sprite.new(
     animations: { fly: 1..3}
 )
 
+sound = Sound.new ('jump.ogg')
+
 on :key_held do |event|
     case event.key
     when 'up'
@@ -50,6 +52,10 @@ end
 
 on :key_up do
     sprite.stop
+end
+
+on :key_down do
+    sound.play
 end
 
 show
