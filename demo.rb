@@ -40,6 +40,14 @@ sound = Sound.new ('jump.ogg')
 music = Music.new("background_music.ogg", loop: true)
 music.play
 
+Text.new(
+    'fly fly fly',
+    x: 350,
+    y: 40,
+    size: 36,
+    color: 'white'
+)
+
 on :key_held do |event|
     case event.key
     when 'up'
