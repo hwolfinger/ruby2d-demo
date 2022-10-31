@@ -27,4 +27,15 @@ Triangle.new(
     x3:210, y3:110,
 )
 
+on :key_held do |event|
+    case event.key_held
+    when 'up'
+        square.y -= 5
+    when 'down'
+        square.y += 5
+    when 'left'
+        square.x -= 5
+    when 'right'
+        square.x += 5
+    end
 show
