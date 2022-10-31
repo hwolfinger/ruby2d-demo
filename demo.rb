@@ -49,6 +49,8 @@ Text.new(
 )
 
 on :key_held do |event|
+    sprite.play(animation: :fly)
+    
     case event.key
     when 'up'
         sprite.y -= 5
