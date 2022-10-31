@@ -20,4 +20,11 @@ Circle.new(
     radius: 90,
 )
 
+Triangle.new(
+    color: 'orange',
+    x1:210, y1:10,
+    x2:310, y2:10,
+    x3:210, y3:110,
+)
+
 show
